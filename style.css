@@ -1,3 +1,12 @@
-.category{
+body {
+    background-color: pink;
+}
+
+.category {
     font-size: medium;
+    color: black;
+}
+
+.links {
+    font-size: 28;
 }
