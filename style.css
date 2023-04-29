@@ -2,14 +2,40 @@ body {
     background-image: url("./images/BackGround.jpg");
 }
 
+header {
+    width: 100%;
+    padding: 2px 0;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    outline: auto;
+    outline-style: groove;
+    outline-width: 8px;
+    outline-color: aqua;
+}
+header .headline{
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .panel {
     background-color: white;
     outline: auto;
     outline-style: groove;
-    outline-color: black;
+    outline-width: 10px;
+    outline-color: greenyellow;
     padding: 10px;
-    margin: 20px;
+    margin: 30px;
     width: 400px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: skyblue;
 }
 
 .category-name {
@@ -26,11 +52,14 @@ body {
 .images a img {
     width: 60px;
     height: 60px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
     object-fit: scale-down;
 }
 
 .images a {
     text-decoration: none;
+}
+
+.images a img:hover {
+    transform: scale(1.1, 1.1);
 }
