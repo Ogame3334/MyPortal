@@ -1,5 +1,5 @@
 body {
-    background-color: pink;
+    background-image: url("./images/BackGround.jpg");
 }
 
 .category {
@@ -9,4 +9,8 @@ body {
 
 .links {
     font-size: 28;
+}
+
+.images a img {
+    width: 60px;
 }
