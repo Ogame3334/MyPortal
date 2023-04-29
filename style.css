@@ -2,15 +2,35 @@ body {
     background-image: url("./images/BackGround.jpg");
 }
 
-.category {
-    font-size: medium;
-    color: black;
+.panel {
+    background-color: white;
+    outline: auto;
+    outline-style: groove;
+    outline-color: black;
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
 }
 
-.links {
-    font-size: 28;
+.category-name {
+    font-size: 36;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.site-button {
+    width: 80px;
 }
 
 .images a img {
     width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    object-fit: scale-down;
+}
+
+.images a {
+    text-decoration: none;
 }
