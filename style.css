@@ -41,6 +41,7 @@ header .headline{
     margin: 10px;
 }
 
+
 @keyframes board-anim {
     10% {
         transform: rotate(1.2deg);
