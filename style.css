@@ -19,11 +19,6 @@ header .headline{
     margin-bottom: 10px;
 }
 
-.board {
-    align-content: center;
-    margin: 10px;
-}
-
 .panel {
     background-color: white;
     outline: auto;
@@ -33,25 +28,58 @@ header .headline{
     padding: 10px;
     margin: 30px;
     width: 500px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+    box-shadow: 13px 13px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.circle {
+.board:hover {
+    animation: board-anim 1s;
+    transform-origin: 50% 10px;
+}
+
+.board {
+    align-content: center;
+    margin: 10px;
+}
+
+@keyframes board-anim {
+    10% {
+        transform: rotate(1.2deg);
+    }
+    30% {
+        transform: rotate(-0.8deg);
+    }
+    50% {
+        transform: rotate(0.8deg);
+    }
+    70% {
+        transform: rotate(-0.4deg);
+    }
+    90% {
+        transform: rotate(0.4deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.pin {
     width: 20px;
     height: 20px;
     position: relative;
-    left: 270px;
+    top: -5px;
+    left: 280px;
     border-radius: 50%;
     background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .line-right {
-    width: 285px;
+    width: 280px;
     position: relative;
-    left: 280px;
-    top: 8px;
+    left: 285px;
+    top: 5px;
     border-bottom: 3px solid black;
-    transform: rotate(12deg);
+    transform: rotate(13deg);
     transform-origin: 0%;
 }
 
@@ -81,6 +109,7 @@ header .headline{
     height: 80px;
     margin: 10px;
     object-fit: scale-down;
+    transition: 0.3s;
 }
 
 .images a {
