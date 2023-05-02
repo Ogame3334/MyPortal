@@ -13,7 +13,7 @@ header {
     outline-width: 8px;
     outline-color: aqua;
 }
-header .headline{
+.headline{
     font-size: 60px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -36,9 +36,20 @@ header .headline{
     transform-origin: 50% 10px;
 }
 
+.board:active {
+    animation: board-anim 1s;
+    transform-origin: 50% 10px;
+}
+
 .board {
     align-content: center;
     margin: 10px;
+}
+
+.cork-board {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -70,7 +81,7 @@ header .headline{
     top: -5px;
     left: 280px;
     border-radius: 50%;
-    background: skyblue;
+    background: aqua;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -105,6 +116,11 @@ header .headline{
     width: 100px;
 }
 
+.images {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
 .images a img {
     width: 80px;
     height: 80px;
@@ -118,5 +134,40 @@ header .headline{
 }
 
 .images a img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.search-text-box {
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    font-size: medium;
+    justify-content: center;
+    width: 600px;
+    height: 40px;
+}
+
+.search-box {
+    display: flex;
+    background-color: white;
+    margin: 50px auto;
+    padding: 10px;
+    width: 700px;
+    border-radius: 50px;
+}
+
+.search-box a{
+    text-decoration: none;
+}
+
+.search-button {
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    position: relative;
+    left: 10px;
+}
+
+.search-button:hover {
     transform: scale(1.1, 1.1);
 }

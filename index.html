@@ -4,6 +4,7 @@
         <link href="style.css" rel="stylesheet">
         <link rel="icon" href="favicon.ico">
         <link rel="icon" type="image/png" href="./images/icon.jpg">
+        <script src="./script.js"></script>
     </head>
     <body>
         <header>
@@ -12,8 +13,14 @@
             </h1>
         </header>
         <main>
-            <div class="box"></div>
-            <div style="display: flex; flex-wrap: wrap;">
+            <div class="search-box">
+                <a href="javascript:search();">
+                    <img src="./images/search_button.png" class="search-button">
+                </a>
+                <input class="search-text-box" type="text" id="search-text-box" onkeypress="down_enter(event.keyCode);" >
+                <script>document.getElementById('search-text-box').focus();</script>
+            </div>
+            <div class="cork-board">
                 <br>
                 <div class="board">
                     <div class="line-right"></div>
@@ -22,7 +29,7 @@
                     <br>
                     <div class="panel">
                         <h2 class="category-name">Google</h2>
-                        <div class="images" style="display: flex; flex-wrap: wrap;" >
+                        <div class="images">
                             <a href="https://www.google.com/">
                                 <img class="c-btn" src="./images/Google/Google.png">
                             </a>
