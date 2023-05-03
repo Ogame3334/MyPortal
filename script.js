@@ -1,5 +1,5 @@
 function gen_search_url(words){
-    if(words.slice(0, 8) == 'https://' || words.slice(0, 7) == 'http://'){
+    if(/^https?:\/\//.test(words)){
         return words
     }
     const base_url = 'https://www.google.com/search?q=';
