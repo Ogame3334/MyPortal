@@ -21,3 +21,5 @@ function down_enter(code){
         search();
     }
 }
+
+document.getElementById('search-text-box').focus();
