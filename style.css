@@ -3,15 +3,12 @@ body {
 }
 
 header {
-    width: 100%;
-    padding: 2px 0;
-    margin-bottom: 30px;
+    padding: 20px 60px;
+    margin: 30px auto;
     text-align: center;
     background-color: white;
-    outline: auto;
-    outline-style: groove;
-    outline-width: 8px;
-    outline-color: aqua;
+    width: fit-content;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.8);
 }
 .headline{
     font-size: 60px;
@@ -85,6 +82,50 @@ header {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
+.header-pin-right{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -15px;
+    left: -55px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.header-pin-left{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -35px;
+    left: 410px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.searchbox-pin-left{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 75px;
+    left: 575px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.searchbox-pin-right{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -35px;
+    left: 410px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
 .line-right {
     width: 280px;
     position: relative;
@@ -93,6 +134,7 @@ header {
     border-bottom: 3px solid black;
     transform: rotate(13deg);
     transform-origin: 0%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 }
 
 .line-left {
@@ -103,6 +145,7 @@ header {
     border-bottom: 3px solid black;
     transform: rotate(167deg);
     transform-origin: 0%;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.6);
 }
 
 .category-name {
@@ -154,6 +197,9 @@ header {
     padding: 10px;
     width: 700px;
     border-radius: 50px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    outline: solid;
+    outline-color: yellow;
 }
 
 .search-box a{
