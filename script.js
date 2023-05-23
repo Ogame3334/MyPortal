@@ -3,9 +3,9 @@ function gen_search_url(words){
         return words
     }
     const base_url = 'https://www.google.com/search?q=';
-    words = base_url + words;
-    words = words.replaceAll('+', '%2B').replaceAll(' ', '+').replaceAll('　', '+');
-    url = words + '&hl=ja';
+    // var url = base_url + words;
+    // words = words.replaceAll('#', '%23').replaceAll('&', '%26').replaceAll('+', '%2B').replaceAll('?', '%3F').replaceAll('=', '%3D').replaceAll(' ', '+').replaceAll('　', '+');
+    var url = base_url + encodeURIComponent(words) + '&hl=ja';
 
     return url;
 }
