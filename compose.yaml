@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  myportal:
+    image: drogonframework/drogon
+    command: /root/myportal/execute.sh
+    container_name: myportal
+    volumes:
+      - .:/root/myportal
+    ports:
+      - "3292:3292"
