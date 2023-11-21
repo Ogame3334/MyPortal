@@ -4,8 +4,6 @@
 
 using namespace drogon;
 
-namespace myportal
-{
 namespace api
 {
 class suggest : public drogon::HttpController<suggest>
@@ -13,8 +11,8 @@ class suggest : public drogon::HttpController<suggest>
   public:
     METHOD_LIST_BEGIN
     // use METHOD_ADD to add your custom processing function here;
-    // METHOD_ADD(suggest::get, "/{2}/{1}", Get); // path is /myportal/api/suggest/{arg2}/{arg1}
-    // METHOD_ADD(suggest::your_method_name, "/{1}/{2}/list", Get); // path is /myportal/api/suggest/{arg1}/{arg2}/list
+    // METHOD_ADD(suggest::get, "/{2}/{1}", Get); // path is /api/suggest/{arg2}/{arg1}
+    // METHOD_ADD(suggest::your_method_name, "/{1}/{2}/list", Get); // path is /api/suggest/{arg1}/{arg2}/list
     // ADD_METHOD_TO(suggest::your_method_name, "/absolute/path/{1}/{2}/list", Get); // path is /absolute/path/{arg1}/{arg2}/list
     METHOD_ADD(suggest::getSuggests, "/{1:word}", Get);
 
@@ -30,5 +28,4 @@ class suggest : public drogon::HttpController<suggest>
     std::string replaceUCS(std::string_view arg);
     int convertHex(std::string_view charCode);
 };
-}
 }

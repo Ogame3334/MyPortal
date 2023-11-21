@@ -1,0 +1,229 @@
+body {
+    background-image: url("./images/BackGround.jpg");
+}
+
+header {
+    padding: 20px 60px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: white;
+    width: fit-content;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.8);
+}
+.headline{
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.panel {
+    background-color: white;
+    outline: auto;
+    outline-style: groove;
+    outline-width: 10px;
+    outline-color: greenyellow;
+    padding: 10px;
+    margin: 30px;
+    width: 500px;
+    box-shadow: 13px 13px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.board:hover {
+    animation: board-anim 1s;
+    transform-origin: 50% 10px;
+}
+
+.board:active {
+    animation: board-anim 1s;
+    transform-origin: 50% 10px;
+}
+
+.board {
+    align-content: center;
+    margin: 10px;
+}
+
+.cork-board {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@keyframes board-anim {
+    10% {
+        transform: rotate(1.2deg);
+    }
+    30% {
+        transform: rotate(-0.8deg);
+    }
+    50% {
+        transform: rotate(0.8deg);
+    }
+    70% {
+        transform: rotate(-0.4deg);
+    }
+    90% {
+        transform: rotate(0.4deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.pin {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -5px;
+    left: 280px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.header-pin-right{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -15px;
+    left: -55px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.header-pin-left{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -35px;
+    left: 410px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.searchbox-pin-left{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 75px;
+    left: 575px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.searchbox-pin-right{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -35px;
+    left: 410px;
+    border-radius: 50%;
+    background: skyblue;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.line-right {
+    width: 280px;
+    position: relative;
+    left: 285px;
+    top: 5px;
+    border-bottom: 3px solid black;
+    transform: rotate(13deg);
+    transform-origin: 0%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.line-left {
+    width: 265px;
+    position: relative;
+    left: 280px;
+    top: 5px;
+    border-bottom: 3px solid black;
+    transform: rotate(167deg);
+    transform-origin: 0%;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.6);
+}
+
+.category-name {
+    font-size: 36;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.site-button {
+    width: 100px;
+}
+
+.images {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.images a img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    object-fit: scale-down;
+    transition: 0.3s;
+}
+
+.images a {
+    text-decoration: none;
+}
+
+.images a img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.search-text-box {
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    font-size: medium;
+    justify-content: center;
+    width: 600px;
+    height: 40px;
+}
+
+.search-box {
+    display: flex;
+    background-color: white;
+    margin: 50px auto;
+    padding: 10px;
+    width: 700px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    outline: solid;
+    outline-color: yellow;
+    position: relative;
+}
+
+.search-box suggest-box{
+    margin: auto;
+    position: absolute;
+    top: 40px;
+    width: 600px;
+    height: 40px;
+    background-color: aquamarine;
+}
+
+.search-box a{
+    text-decoration: none;
+}
+
+.search-button {
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    position: relative;
+    left: 10px;
+}
+
+.search-button:hover {
+    transform: scale(1.1, 1.1);
+}

@@ -13,7 +13,7 @@ class MainIndex : public drogon::HttpSimpleController<MainIndex>
     PATH_LIST_BEGIN
     // list path definitions here;
     // PATH_ADD("/path", "filter1", "filter2", HttpMethod1, HttpMethod2...);
-    PATH_ADD("/MyPortal", Get);
+    PATH_ADD("/", Get);
     PATH_LIST_END
 };
 }

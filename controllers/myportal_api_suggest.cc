@@ -3,7 +3,7 @@
 #include <cmath>
 #include <uchar.h>
 
-using namespace myportal::api;
+using namespace api;
 
 // Add definition of your processing function here
 
