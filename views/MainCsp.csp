@@ -166,6 +166,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="board">
+                    <div class="line-right"></div>
+                    <div class="line-left"></div>
+                    <div class="pin"></div>
+                    <br>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=kazuhiroisobe0522%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
             </div>
         </main>
         <script src="./medias/script.js"></script>
