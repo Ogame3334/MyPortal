@@ -14,15 +14,6 @@
             </h1>
         </header>
         <main>
-            <!-- <div class="searchbox-pin-right"></div>
-            <div class="searchbox-pin-left"></div> -->
-            <div class="search-box">
-                <a href="javascript:search();">
-                    <img src="./medias/images/search_button.webp" class="search-button">
-                </a>
-                <input class="search-text-box" type="text" id="search-text-box" onkeypress="down_enter(event.keyCode);" >
-                <div class="suggest-box"></div>
-            </div>
             <div class="cork-board">
                 <br>
                 <div class="board">
@@ -175,6 +166,22 @@
                         <iframe src="https://calendar.google.com/calendar/embed?src=kazuhiroisobe0522%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="500" height="400" frameborder="0" scrolling="no"></iframe>
                     </div>
                 </div>
+            </div>
+            <div class="search-box" id="search-box">
+                <div class="search-container">
+                    <a href="javascript:search();">
+                        <img src="./medias/images/search_button.webp" class="search-button">
+                    </a>
+                    <input class="search-text-box" type="text" id="search-text-box" onkeypress="down_enter(event.keyCode);" >
+                </div>
+                <div id="suggest-area"></div>
+                <!--
+                <div class="suggest-container">
+                    <div class="suggest-box">
+
+                    </div>
+                </div>
+                -->
             </div>
         </main>
         <script src="./medias/script.js"></script>
