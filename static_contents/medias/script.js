@@ -52,7 +52,7 @@ function down_enter(code){
 }
 
 async function callSuggestApi(word) {
-    const res = await fetch("http://localhost:49153/api/suggest/" + word_encode(word));
+    const res = await fetch("http://portal.ogmgre.com/api/suggest/" + word_encode(word));
     const suggests = await res.json();
     return suggests
 }
