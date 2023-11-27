@@ -19,9 +19,9 @@ function word_encode(word){
 
 function recolor_suggest(pre_num, now_num){
     var pre_con = document.getElementById('suggest-container-' + String(pre_num));
-    if(!(pre_con == null)) pre_con.setAttribute('style', 'background-color: white');
+    if(!(pre_con == null)) pre_con.removeAttribute('style');
     var pre_text = document.getElementById('suggest-box-' + String(pre_num));
-    if(!(pre_text == null)) pre_text.setAttribute('style', 'background-color: white');
+    if(!(pre_text == null)) pre_text.removeAttribute('style');
     
     var now_con = document.getElementById('suggest-container-' + String(now_num));
     if(!(now_con == null)) now_con.setAttribute('style', 'background-color: lightgray');
