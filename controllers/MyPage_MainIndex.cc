@@ -6,7 +6,7 @@ void MainIndex::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<
 {
     // write your application logic here
     // viewに渡すデータはHttpViewData型に格納します
-    drogon::HttpViewData viewData;
+    // drogon::HttpViewData viewData;
     // HttpViewData へのデータの格納は、key - valueのペアで行います。
     // ここでは name というキーワードに対して、リクエストで渡ってきた request_name 引数の値を取得し設定しています。
     // viewData.insert(
@@ -20,7 +20,7 @@ void MainIndex::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<
     // resp->setContentTypeCode(CT_TEXT_HTML);
     // resp->setBody("<h1>hogehoge</h1>");
     callback(
-        drogon::HttpResponse::newHttpViewResponse("MainCsp.csp", viewData)
+        HttpResponse::newFileResponse("/medias/index.html")
         // resp
         );
 }
