@@ -20,7 +20,7 @@ void MainIndex::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<
     // resp->setContentTypeCode(CT_TEXT_HTML);
     // resp->setBody("<h1>hogehoge</h1>");
     callback(
-        HttpResponse::newFileResponse("/medias/index.html")
+        HttpResponse::newFileResponse("./static_contents/medias/index.html")
         // resp
         );
 }
