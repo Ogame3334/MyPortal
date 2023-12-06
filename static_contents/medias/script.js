@@ -51,6 +51,13 @@ function down_enter(code){
     }
 }
 
+function redirect_localhost(code){
+    if(13 == code){
+        const words = document.getElementById('localhost-port-box').value;
+        window.location.href = 'http://localhost:' + words;
+    }
+}
+
 async function callSuggestApi(word) {
     const res = await fetch("https://portal.ogmgre.com/api/suggest/" + word_encode(word));
     const suggests = await res.json();

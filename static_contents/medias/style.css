@@ -225,3 +225,13 @@ header {
 .search-button:hover {
     transform: scale(1.1, 1.1);
 }
+
+.localhost-port-box{
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    font-size: medium;
+    justify-content: center;
+    /* width: 600px;
+    height: 40px; */
+}
