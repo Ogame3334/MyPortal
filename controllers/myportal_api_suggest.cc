@@ -2,22 +2,18 @@
 #include <drogon/HttpClient.h>
 #include <cmath>
 #include <uchar.h>
+#include <locale>
+#include <codecvt>
 
 using namespace api;
 
 // Add definition of your processing function here
 
-// http://www.google.com/complete/search?hl=en&q=hello&output=toolbar
+// http://www.google.com/complete/search?hl=jp&q=hello&ie=utf_8&oe=utf_8&output=toolbar
 
 void suggest::getSuggests(const HttpRequestPtr &req,
                std::function<void (const HttpResponsePtr &)> &&callback,
                std::string &&word){
-    // LOG_DEBUG << "word: " << word;
-    // auto resp = HttpResponse::newHttpResponse();
-    // resp->setBody(word);
-    // resp->setContentTypeCode(CT_TEXT_HTML);
-    // resp->setStatusCode(k200OK);
-    // callback(resp);
     auto client = HttpClient::newHttpClient(
         "http://www.google.com/"
     );
@@ -31,24 +27,18 @@ void suggest::getSuggests(const HttpRequestPtr &req,
         + "output=toolbar";
 
     auto request = HttpRequest::newHttpRequest();
-    std::cout << access_path << std::endl;
     request->setPath(access_path);
     request->setMethod(Get);
 
     auto result = client->sendRequest(request);
 
     auto hoge = result.second->getBody();
-    // HttpResponse
-    // auto response = HttpResponse::newHttpResponse();
     std::string fuga{hoge};
-    std::cout << fuga << std::endl;
-    // response->setBody(fuga);
     
     Json::Value ret;
     auto piyo = parceXmlStr(fuga);
     for(int i = 1; i < piyo.size(); i++){
-        ret[std::to_string(i-1)] = piyo[i];
-        std::cout << replaceUCS(piyo[i]) << std::endl;
+        ret[std::to_string(i-1)] = replaceUCS(piyo[i]);
     }
 
     auto response = HttpResponse::newHttpJsonResponse(ret);
@@ -79,6 +69,13 @@ std::vector<std::string> suggest::parceXmlStr(std::string_view xmlData){
     }
     return words;
 }
+
+std::string c16tochar(char16_t c16){
+    std::wstring_convert<std::codecvt_utf8<char16_t>, char16_t> converter;
+    std::string str = converter.to_bytes(c16);
+    return str;
+}
+
 std::string suggest::replaceUCS(std::string_view arg){
     bool isAnd = false;
     bool isSharp = false;
@@ -88,16 +85,8 @@ std::string suggest::replaceUCS(std::string_view arg){
     for(auto c : arg){
         if(replaceMode){
             if(c == ';'){
-                std::cout << charCode << std::endl;
-                std::cout << this->convertHex(charCode) << std::endl;
-                wchar_t a = this->convertHex(charCode);
                 char16_t a16 = this->convertHex(charCode);
-                // char* b;
-                // auto hoge = wcstombs(b, &a, 1);
-                // std::wcout << a << std::endl;
-                // std::cout << hoge << std::endl;
-                std::wcout << a16 << std::endl;
-                output += a;
+                output += c16tochar(a16);
                 charCode = "";
                 replaceMode = false;
             }
