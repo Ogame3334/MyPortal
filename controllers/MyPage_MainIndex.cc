@@ -1,26 +1,70 @@
 #include "MyPage_MainIndex.h"
+#include <fstream>
 
 using namespace MyPortal;
 
+Json::Value readLinkJson(){
+    std::ifstream ifs;
+    ifs.open("../data.json");
+    if(!ifs.good()) {
+        exit(1);
+    }
+    
+    std::string jsonStr((std::istreambuf_iterator<char>(ifs)),
+        std::istreambuf_iterator<char>());
+    
+
+    ifs.close();
+
+    Json::Reader reader;
+    Json::Value value;
+    reader.parse(jsonStr, value);
+
+    return value;
+}
+
+HttpViewData makeInformation(std::string url, std::string src){
+    HttpViewData data;
+    data.insert("url", url);
+    data.insert("src", src);
+
+    return data;
+}
+
 void MainIndex::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<void (const HttpResponsePtr &)> &&callback)
 {
-    // write your application logic here
-    // viewに渡すデータはHttpViewData型に格納します
-    // drogon::HttpViewData viewData;
-    // HttpViewData へのデータの格納は、key - valueのペアで行います。
-    // ここでは name というキーワードに対して、リクエストで渡ってきた request_name 引数の値を取得し設定しています。
-    // viewData.insert(
-    //     "name", 
-    //     req->getParameter("request_name")
-    //     );
+    const std::string CategoryName = "category_name";
+    const std::string Informations = "informations";
+    Json::Value jsonData = readLinkJson();
+    HttpViewData viewData;
+    std::vector<HttpViewData> categories;
+    for(auto category : jsonData["categories"]){
+        HttpViewData data;
+        std::vector<HttpViewData> informations;
+        for(auto information : category[Informations]){
+            informations.push_back(
+                makeInformation(
+                    information["url"].asString(),
+                    information["src"].asString()
+                )
+            );
+        }
 
-    //"HelloView.csp"から構築されたviewへの呼び出しを作成し、コールバックに登録します。
-    // auto resp = HttpResponse::newHttpResponse();
-    // resp->setStatusCode(k200OK);
-    // resp->setContentTypeCode(CT_TEXT_HTML);
-    // resp->setBody("<h1>hogehoge</h1>");
-    callback(
-        HttpResponse::newFileResponse("./static_contents/medias/index.html")
-        // resp
-        );
+        data.insert(CategoryName, category[CategoryName].asString());
+        data.insert(Informations, informations);
+        categories.push_back(data);
+    }
+    viewData["categories"] = categories;
+
+    auto res = HttpResponse::newHttpViewResponse("top.csp", viewData);
+    callback(res);
+
+
+    // auto res = HttpResponse::newHttpResponse();
+    // res->setStatusCode(k200OK);
+    // res->setContentTypeCode(CT_TEXT_HTML);
+    // res->setBody("Hi, I'm .");
+    // readLinkJson();
+    
+    // callback(res);
 }

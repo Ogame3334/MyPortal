@@ -1,0 +1,76 @@
+<%c++ auto categories = @@.get<std::vector<HttpViewData>>("categories");%>
+<%c++ const std::string CategoryName = "category_name"; %>
+<%c++ const std::string Informations = "informations"; %>
+
+<html>
+    <head>
+        <title>OgamePortalSite</title>
+        <link href="/medias/style.css" rel="stylesheet">
+        <link rel="icon" href="favicon.ico">
+        <link rel="icon" type="image/png" href="/medias/images/icon.webp">
+    </head>
+    <body>
+        <header>
+            <div class="header-pin-right"></div>
+            <div class="header-pin-left"></div>
+            <h1 class="headline">
+                <a>PortalBoard</a>
+            </h1>
+        </header>
+        <main>
+            <div class="cork-board">
+                <%c++ for(HttpViewData& category : categories){ %>
+                <div class="board">
+                    <div class="line-right"></div>
+                    <div class="line-left"></div>
+                    <div class="pin"></div>
+                    <br>
+                    <div class="panel">
+                        <h2 class="category-name">{% category.get<std::string>(CategoryName) %}</h2>
+                        <div class="images">
+                            <%c++ auto infomations = category.get<std::vector<HttpViewData>>(Informations); %>
+                            <%c++ for(HttpViewData& info : infomations){ %>
+                            <a href="{% info.get<std::string>("url") %}">
+                                <img class="c-btn" src="{% info.get<std::string>("src") %}">
+                            </a>
+                            <%c++ }%>
+                        </div>
+                    </div>
+                </div>
+                <%c++ }%>
+                <br>
+                <div class="board">
+                    <div class="line-right"></div>
+                    <div class="line-left"></div>
+                    <div class="pin"></div>
+                    <br>
+                    <div class="panel">
+                        <h1 class="category-name">Localhost</h1>
+                        <div class="images" style="display: flex; flex-wrap: wrap;" >
+                            <input class="localhost-port-box" type="text" id="localhost-port-box" value="4915" onkeypress="redirect_localhost(event.keyCode);" >
+                        </div>
+                    </div>
+                </div>
+                <div class="board">
+                    <div class="line-right"></div>
+                    <div class="line-left"></div>
+                    <div class="pin"></div>
+                    <br>
+                    <div class="panel">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=kazuhiroisobe0522%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="500" height="400" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box" id="search-box">
+                <div class="search-container">
+                    <a href="javascript:search();">
+                        <img src="/medias/images/search_button.webp" class="search-button">
+                    </a>
+                    <input class="search-text-box" type="text" id="search-text-box" onkeypress="down_enter(event.keyCode);" >
+                </div>
+                <div id="suggest-area"></div>
+            </div>
+        </main>
+        <script src="/medias/script.js"></script>
+    </body>
+</html>

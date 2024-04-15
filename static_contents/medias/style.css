@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
 body {
     background-image: url("./images/BackGround.jpg");
+    font-family: 'Yomogi', sans-serif !important;
+  	font-style: normal;
 }
 
 header {
@@ -100,7 +104,7 @@ header {
     height: 20px;
     position: relative;
     top: -35px;
-    left: 410px;
+    left: 360px;
     border-radius: 50%;
     background: skyblue;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);

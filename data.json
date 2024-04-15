@@ -1,0 +1,150 @@
+{
+    "categories": [
+        {
+            "category_name": "Google",
+            "informations": [
+                {
+                    "url": "https://www.google.com/",
+                    "src": "/medias/images/Google/Google.webp"
+                },
+                {
+                    "url": "https://www.youtube.com/",
+                    "src": "/medias/images/Google/youtube.png"
+                },
+                {
+                    "url": "https://mail.google.com/mail/",
+                    "src": "/medias/images/Google/gmail.png"
+                },
+                {
+                    "url": "https://drive.google.com/drive/",
+                    "src": "/medias/images/Google/GoogleDrive.png"
+                },
+                {
+                    "url": "https://www.google.co.jp/maps/",
+                    "src": "/medias/images/Google/GoogleMap.webp"
+                }
+            ]
+        },
+        {
+            "category_name": "Subscription & Novel",
+            "informations": [
+                {
+                    "url": "https://animestore.docomo.ne.jp/animestore/",
+                    "src": "/medias/images/Subscription/danime.webp"
+                },
+                {
+                    "url": "https://www.amazon.co.jp/gp/video/storefront/",
+                    "src": "/medias/images/Subscription/primevideo.webp"
+                },
+                {
+                    "url": "https://open.spotify.com/intl-ja",
+                    "src": "/medias/images/Subscription/spotify.webp"
+                },
+                {
+                    "url": "https://syosetu.com/",
+                    "src": "/medias/images/Novel/narou.webp"
+                },
+                {
+                    "url": "https://kakuyomu.jp/",
+                    "src": "/medias/images/Novel/kakuyomu.webp"
+                }
+            ]
+        },
+        {
+            "category_name": "Campus",
+            "informations": [
+                {
+                    "url": "https://ict-i.el.kyutech.ac.jp/my/",
+                    "src": "/medias/images/Campas/moodle.png"
+                },
+                {
+                    "url": "https://virginia.jimu.kyutech.ac.jp",
+                    "src": "/medias/images/Campas/LiveCampas.png"
+                },
+                {
+                    "url": "https://www.iizuka.kyutech.ac.jp/campuslife/schedule/",
+                    "src": "/medias/images/Campas/CampasCalender.png"
+                },
+                {
+                    "url": "https://www.iizuka.kyutech.ac.jp/faculty/educational-info#i-4",
+                    "src": "/medias/images/Campas/schedule.png"
+                },
+                {
+                    "url": "https://edragon-syllabus.jimu.kyutech.ac.jp/guest/syllabuses",
+                    "src": "/medias/images/Campas/syllabus.png"
+                },
+                {
+                    "url": "https://www.kyutech.ac.jp/media/001/202205/binran2022all.pdf",
+                    "src": "/medias/images/Campas/binran.png"
+                }
+            ]
+        },
+        {
+            "category_name": "SNS",
+            "informations": [
+                {
+                    "url": "https://twitter.com/home/",
+                    "src": "/medias/images/SNS/twitter.webp"
+                },
+                {
+                    "url": "https://mastodon.compositecomputer.club/",
+                    "src": "/medias/images/SNS/mastodon.webp"
+                },
+                {
+                    "url": "https://www.instagram.com/",
+                    "src": "/medias/images/SNS/instagram.webp"
+                },
+                {
+                    "url": "https://toybox.compositecomputer.club/",
+                    "src": "/medias/images/SNS/ToyBox.webp"
+                }
+            ]
+        },
+        {
+            "category_name": "Learning",
+            "informations": [
+                {
+                    "url": "https://chat.openai.com/",
+                    "src": "/medias/images/Lerning/chatgpt.png"
+                },
+                {
+                    "url": "https://www.deepl.com/ja/translator",
+                    "src": "/medias/images/Lerning/deepl.webp"
+                },
+                {
+                    "url": "https://www.desmos.com/calculator?lang=ja",
+                    "src": "/medias/images/Lerning/desmos.webp"
+                },
+                {
+                    "url": "https://ja.overleaf.com/project",
+                    "src": "/medias/images/Lerning/overleaf.png"
+                }
+            ]
+        },
+        {
+            "category_name": "Other",
+            "informations": [
+                {
+                    "url": "https://github.com/Ogame3334/",
+                    "src": "/medias/images/Other/github.png"
+                },
+                {
+                    "url": "https://ogame3334.github.io/MyPage_old/?anim=false",
+                    "src": "/medias/images/Other/icon.webp"
+                },
+                {
+                    "url": "https://precure-bio.ogmgre.com/",
+                    "src": "/medias/images/Other/precure_icon.jpg"
+                },
+                {
+                    "url": "https://tumamina.smarthr.jp/",
+                    "src": "/medias/images/Other/smarthr.png"
+                },
+                {
+                    "url": "https://p.secure.freee.co.jp/#",
+                    "src": "/medias/images/Other/freee.png"
+                }
+            ]
+        }
+    ]
+}
