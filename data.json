@@ -133,7 +133,7 @@
                     "src": "/medias/images/Other/github.png"
                 },
                 {
-                    "url": "https://ogame3334.github.io/MyPage_old/?anim=false",
+                    "url": "https://ogmgre.com",
                     "src": "/medias/images/Other/icon.webp"
                 },
                 {
@@ -141,12 +141,12 @@
                     "src": "/medias/images/Other/precure_icon.jpg"
                 },
                 {
-                    "url": "https://tumamina.smarthr.jp/",
-                    "src": "/medias/images/Other/smarthr.png"
-                },
-                {
                     "url": "https://p.secure.freee.co.jp/#",
                     "src": "/medias/images/Other/freee.png"
+                },
+                {
+                    "url": "https://www.videosmaller.com/jp/",
+                    "src": "/medias/images/Other/videosmaller.svg"
                 }
             ]
         }
