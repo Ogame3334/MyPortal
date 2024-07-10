@@ -97,6 +97,10 @@
                 {
                     "url": "https://toybox.compositecomputer.club/",
                     "src": "/medias/images/SNS/ToyBox.webp"
+                },
+                {
+                    "url": "https://www.notion.so/",
+                    "src": "/medias/images/SNS/notion.png"
                 }
             ]
         },
@@ -147,6 +151,10 @@
                 {
                     "url": "https://www.videosmaller.com/jp/",
                     "src": "/medias/images/Other/videosmaller.svg"
+                },
+                {
+                    "url": "about:blank",
+                    "src": "/medias/images/Other/aboutblank.png"
                 }
             ]
         }
