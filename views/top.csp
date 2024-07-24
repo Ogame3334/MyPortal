@@ -38,7 +38,8 @@
                     </div>
                 </div>
                 <%c++ }%>
-                <br>
+            </div>
+            <div class="cork-board">
                 <div class="board">
                     <div class="line-right"></div>
                     <div class="line-left"></div>
