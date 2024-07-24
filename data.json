@@ -130,6 +130,15 @@
             ]
         },
         {
+            "category_name": "Game",
+            "informations": [
+                {
+                    "url": "https://vrchat.com/home",
+                    "src": "/medias/images/Game/vrchat.png"
+                }
+            ]
+        },
+        {
             "category_name": "Other",
             "informations": [
                 {
