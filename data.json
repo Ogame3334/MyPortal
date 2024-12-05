@@ -97,27 +97,19 @@
             ]
         },
         {
-            "category_name": "Subscription & Novel",
+            "category_name": "Development",
             "informations": [
                 {
-                    "url": "https://animestore.docomo.ne.jp/animestore/",
-                    "src": "/medias/images/Subscription/danime.webp"
+                    "url": "https://github.com/Ogame3334/",
+                    "src": "/medias/images/Development/github.png"
                 },
                 {
-                    "url": "https://www.amazon.co.jp/gp/video/storefront/",
-                    "src": "/medias/images/Subscription/primevideo.webp"
+                    "url": "https://console.wasabisys.com/",
+                    "src": "/medias/images/Development/wasabi.png"
                 },
                 {
-                    "url": "https://open.spotify.com/intl-ja",
-                    "src": "/medias/images/Subscription/spotify.webp"
-                },
-                {
-                    "url": "https://syosetu.com/",
-                    "src": "/medias/images/Novel/narou.webp"
-                },
-                {
-                    "url": "https://kakuyomu.jp/",
-                    "src": "/medias/images/Novel/kakuyomu.webp"
+                    "url": "https://cloud.linode.com/linodes",
+                    "src": "/medias/images/Development/linode.png"
                 }
             ]
         },
@@ -156,12 +148,33 @@
             ]
         },
         {
-            "category_name": "Other",
+            "category_name": "Subscription & Novel",
             "informations": [
                 {
-                    "url": "https://github.com/Ogame3334/",
-                    "src": "/medias/images/Other/github.png"
+                    "url": "https://animestore.docomo.ne.jp/animestore/",
+                    "src": "/medias/images/Subscription/danime.webp"
                 },
+                {
+                    "url": "https://www.amazon.co.jp/gp/video/storefront/",
+                    "src": "/medias/images/Subscription/primevideo.webp"
+                },
+                {
+                    "url": "https://open.spotify.com/intl-ja",
+                    "src": "/medias/images/Subscription/spotify.webp"
+                },
+                {
+                    "url": "https://syosetu.com/",
+                    "src": "/medias/images/Novel/narou.webp"
+                },
+                {
+                    "url": "https://kakuyomu.jp/",
+                    "src": "/medias/images/Novel/kakuyomu.webp"
+                }
+            ]
+        },
+        {
+            "category_name": "Other",
+            "informations": [
                 {
                     "url": "https://p.secure.freee.co.jp/#",
                     "src": "/medias/images/Other/freee.png"
